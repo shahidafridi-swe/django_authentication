@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content  %}
+
+<h3 class="mt-5">Hello {{request.user.first_name}} {{request.user.last_name}}</h3>
+
+<div>
+    <hr>
+    <a class="btn btn-outline-dark text-white" href="{% url "update_profile" %}">Update Profile</a>
+    <hr>
+    <a class="btn btn-outline-dark text-white" href="{% url "change_password" %}">Change Password</a>
+    <hr>
+    <a class="btn btn-outline-dark text-white" href="{% url "set_password" %}">Change Password Without Old Password</a>
+</div>
+
+{% endblock content  %}
